@@ -1,0 +1,6 @@
+--Separando o primeiro e o último nome do dataset
+Select name, 
+position(' ' in name),
+left(name,position(' ' in name)) as first_name, 
+Right(name, length(name) -position(' ' in name)) as last_name
+from sales_reps
